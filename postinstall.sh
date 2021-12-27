@@ -26,7 +26,7 @@ sudo ln -s /etc/sv/sddm /var/service
 
 ### COPIYNG DOT FILES ###
 
-sudo cp -r /home/.* ~/
+sudo cp -r .config ~/
 
 ### KEYBOARD LANGUAGE FOR X11 ###
 
