@@ -2,7 +2,7 @@
 
 ### DO NOT LAUNCH AS ROOT ###
 
-if [ ! "$EUID" -ne 0 ]
+if [ "$EUID" -ne 0 ]
   then echo "Please do not run as root"
        echo "chmod +x postinstall.sh and run it as your user"
   exit
@@ -11,10 +11,10 @@ fi
 ### INSTALLING PACKAGE ###
 AUDIO="pipewire pulsemixer"
 WM="bspwm sxhkd"
-BASE="xorg-minimal xorg-font xf86-video-intel"
+BASE="xorg-minimal xorg-fonts xf86-video-intel"
 BROWSER="qutebrowser"
 HUD="rofi polybar dunst lxappearance"
-TERMAPP="alacritty fish bpytop"
+TERMAPP="alacritty fish-shell bpytop"
 
 sudo xbps-install $BASE $WM $AUDIO $HUD $BROWSER $TERMAPP
 
