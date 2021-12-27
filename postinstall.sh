@@ -14,7 +14,7 @@ WM="bspwm sxhkd"
 BASE="xorg-minimal xorg-font xf86-video-intel"
 BROWSER="qutebrowser"
 HUD="rofi polybar dunst lxappearance"
-TERMAPP="alacritty fish htop"
+TERMAPP="alacritty fish bpytop"
 
 sudo xbps-install $BASE $WM $AUDIO $HUD $BROWSER $TERMAPP
 
