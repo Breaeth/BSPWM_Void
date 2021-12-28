@@ -1,0 +1,10 @@
+{
+    "PluginRepo": true,
+    "ThemeRepo": true,
+    "Translator": false,
+    "CallTimeCounter": true,
+    "BetterVolume": true,
+    "FreeEmojis": true,
+    "ZeresPluginLibrary": false,
+    "BDFDB": true
+}
