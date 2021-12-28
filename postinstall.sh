@@ -26,14 +26,6 @@ sudo ln -s /etc/sv/wpa_supplicant /var/service
 sudo ln -s /etc/sv/dbus /var/service
 sudo ln -s /etc/sv/sddm /var/service
 
-### COPIYNG DOT FILES ###
-
-sudo cp -r .config ~/
-
-### chmod files ###
-
-chmod +x ~/.config/bspwm/bspwmrc
-
 ### GRUB theme ### 
 
 wget -O - https://github.com/shvchk/poly-dark/raw/master/install.sh | bash
