@@ -10,13 +10,15 @@ fi
 
 ### INSTALLING PACKAGE ###
 AUDIO="pipewire pulsemixer"
+SPOTIFY="spotifyd spotify-qt"
+FONT="font-iosevka font-awesome"
 WM="bspwm sxhkd"
 BASE="xorg-minimal xorg-fonts xf86-video-intel"
 BROWSER="qutebrowser"
-HUD="rofi polybar dunst lxappearance"
-TERMAPP="alacritty fish-shell bpytop"
+HUD="rofi feh picom polybar dunst lxappearance"
+TERMAPP="alacritty fisho-shell bpytop neofetch wget"
 
-sudo xbps-install $BASE $WM $AUDIO $HUD $BROWSER $TERMAPP
+sudo xbps-install $BASE $WM $AUDIO $HUD $BROWSER $TERMAPP $SPOTIFY $FONT
 
 ### ENABLE APP'S FOR RUNIT ###
 
@@ -28,11 +30,19 @@ sudo ln -s /etc/sv/sddm /var/service
 
 sudo cp -r .config ~/
 
-### KEYBOARD LANGUAGE FOR X11 ###
+### chmod files ###
 
-sudo mkdir -p /etc/X11/xorg.conf.d/
-sudo cp 00-keyboard.conf /etc/X11/xorg.conf.d/
+chmod +x ~/.config/bspwm/bspwmrc
 
-### GRUB CONFIGURATION ###
+### GRUB theme ### 
 
-sudo cp grub /etc/default/grub
+wget -O - https://github.com/shvchk/poly-dark/raw/master/install.sh | bash
+
+### Discord ###
+
+wget https://dl.discordapp.net/apps/linux/0.0.16/discord-0.0.16.tar.gz
+wget https://github.com/BetterDiscord/installer/releases/download/v1.1.1/BetterDIscord-Linux.AppImage
+
+
+
+
