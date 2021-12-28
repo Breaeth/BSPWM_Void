@@ -16,7 +16,7 @@ WM="bspwm sxhkd"
 BASE="xorg-minimal xorg-fonts xf86-video-intel"
 BROWSER="qutebrowser"
 HUD="rofi feh picom polybar dunst lxappearance"
-TERMAPP="alacritty fisho-shell bpytop neofetch wget"
+TERMAPP="alacritty neovim fisho-shell bpytop neofetch wget maim"
 
 sudo xbps-install $BASE $WM $AUDIO $HUD $BROWSER $TERMAPP $SPOTIFY $FONT
 
