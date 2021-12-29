@@ -37,7 +37,7 @@ wget -O - https://github.com/shvchk/poly-dark/raw/master/install.sh | bash
 
 ### Discord ###
 
-wget https://dl.discordapp.net/apps/linux/0.0.16/discord-0.0.16.tar.gz
+wget https://dl.discordapp.net/apps/linux/0.0.16/discord-0.0.16.tar.gz | tar -xf 
 
 
 
