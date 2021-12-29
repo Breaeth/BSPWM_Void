@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DIR=`pwd` 
+
 ### DO NOT LAUNCH AS ROOT ###
 
 if [ "$EUID" -ne 0 ]
@@ -49,9 +51,11 @@ wget -O - https://github.com/shvchk/poly-dark/raw/master/install.sh | bash
 ### Discord ###
 
 wget https://dl.discordapp.net/apps/linux/0.0.16/discord-0.0.16.tar.gz | tar -xf 
+cd Discord ; sudo chmod +x Discord ; ./Discord
 
 ### MOOVING IMPORTANT FILES ###
 
+cd $DIR
 mv .config .xinitrc .bash_profile $HOME
 #For SDDM
 mv sddm/sugar-candy /usr/share/sddm/themes/
