@@ -16,10 +16,14 @@ WM="bspwm sxhkd"
 BASE="xorg-minimal xorg-fonts xf86-video-intel sddm"
 BROWSER="qutebrowser"
 HUD="rofi feh picom polybar dunst lxappearance"
-TERMAPP="alacritty neovim fisho-shell htop neofetch wget maim setxkbmap xclip gpick"
+TERMAPP="alacritty neovim fish-shell htop neofetch wget maim setxkbmap xclip gpick"
 QT="qt5-svg qt5-quickcontrols2 qt5-graphicaleffects"
 
 sudo xbps-install $BASE $WM $AUDIO $HUD $BROWSER $TERMAPP $SPOTIFY $FONT $QT
+
+### CREATE IMPORTANT FOLDER ### 
+
+sudo mkdir -p /etc/sddm.conf.d
 
 ### ENABLE APP'S FOR RUNIT ###
 
