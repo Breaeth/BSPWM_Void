@@ -39,6 +39,12 @@ wget -O - https://github.com/shvchk/poly-dark/raw/master/install.sh | bash
 
 wget https://dl.discordapp.net/apps/linux/0.0.16/discord-0.0.16.tar.gz | tar -xf 
 
+### MOOVING IMPORTANT FILES ###
 
+mv .config .xinitrc .bash_profile $HOME
+#For SDDM
+mv sddm/sugar-candy /usr/share/sddm/themes/
+mv avatar.conf /etc/sddm.conf.d/
+#
 
 
