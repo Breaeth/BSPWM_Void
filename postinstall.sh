@@ -9,16 +9,17 @@ if [ "$EUID" -ne 0 ]
 fi
 
 ### INSTALLING PACKAGE ###
-AUDIO="pipewire pulsemixer"
+AUDIO="pipewire pulsemixer alsa-pipewire alsa-utils pamixer"
 SPOTIFY="spotifyd spotify-qt"
 FONT="font-iosevka font-awesome"
 WM="bspwm sxhkd"
-BASE="xorg-minimal xorg-fonts xf86-video-intel"
+BASE="xorg-minimal xorg-fonts xf86-video-intel sddm"
 BROWSER="qutebrowser"
 HUD="rofi feh picom polybar dunst lxappearance"
-TERMAPP="alacritty neovim fisho-shell bpytop neofetch wget maim"
+TERMAPP="alacritty neovim fisho-shell htop neofetch wget maim setxkbmap xclip gpick"
+QT="qt5-svg qt5-quickcontrols2 qt5-graphicaleffects"
 
-sudo xbps-install $BASE $WM $AUDIO $HUD $BROWSER $TERMAPP $SPOTIFY $FONT
+sudo xbps-install $BASE $WM $AUDIO $HUD $BROWSER $TERMAPP $SPOTIFY $FONT $QT
 
 ### ENABLE APP'S FOR RUNIT ###
 
@@ -33,7 +34,6 @@ wget -O - https://github.com/shvchk/poly-dark/raw/master/install.sh | bash
 ### Discord ###
 
 wget https://dl.discordapp.net/apps/linux/0.0.16/discord-0.0.16.tar.gz
-wget https://github.com/BetterDiscord/installer/releases/download/v1.1.1/BetterDIscord-Linux.AppImage
 
 
 
