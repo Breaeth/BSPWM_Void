@@ -21,6 +21,17 @@ QT="qt5-svg qt5-quickcontrols2 qt5-graphicaleffects"
 
 sudo xbps-install $BASE $WM $AUDIO $HUD $BROWSER $TERMAPP $SPOTIFY $FONT $QT
 
+### INSTALL PICOM-IBHAGWAN ###
+
+git clone --depth=1 https://github.com/void-linux/void-packages
+cd void-packages
+./xbps-src binary-bootstrap
+echo XBPS_ALLOW_RESTRICTED=yes >> etc/conf
+git clone https://github.com/ibhagwan/picom-ibhagwan-template
+mv picom-ibhagwan-template ./srcpkgs/picom-ibhagwan
+./xbps-src pkg picom-ibhagwan
+sudo xbps-install --repository=hostdir/binpkgs picom-ibhagwan 
+
 ### CREATE IMPORTANT FOLDER ### 
 
 sudo mkdir -p /etc/sddm.conf.d
