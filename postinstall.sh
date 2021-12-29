@@ -13,7 +13,7 @@ fi
 ### INSTALLING PACKAGE ###
 AUDIO="pipewire pulsemixer alsa-pipewire alsa-utils pamixer"
 SPOTIFY="spotifyd spotify-qt"
-FONT="font-iosevka font-awesome"
+FONT="font-iosevka font-awesome5"
 WM="bspwm sxhkd"
 BASE="xorg-minimal xorg-fonts xf86-video-intel sddm"
 BROWSER="qutebrowser"
